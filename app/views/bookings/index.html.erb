@@ -1,0 +1,7 @@
+<h6>Bookings</h6>
+  <%@bookings.each do |booking| %>
+    <li><%= link_to booking.training.title, training_bookings_path(booking)%></li>
+    <%#= link_to 'Delete', training_booking_path(training, booking),
+                  data: { method: :delete, confirm: "Are you sure?" } %>
+    <br>
+  <%end %>

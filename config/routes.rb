@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   resources :trainings do
-    resources :bookings, only: [:new, :create]
+    resources :bookings
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

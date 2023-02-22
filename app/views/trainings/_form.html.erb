@@ -1,0 +1,12 @@
+    <%= simple_form_for(@training) do |f| %>
+    <%= f.input :title, collection: Training::TITLE %>
+    <%= f.input :description, collection: Training::DESCRIPTION %>
+    <%= f.input :title_address, collection: Training::TITLE_ADDRESS%>
+    <%= f.input :price %>
+    <%= f.input :participation %>
+    <%= f.input :date%>
+    <%= f.input :start_at%>
+    <%= f.input :end_at %>
+    <%= f.input :coach, collection: Training::COACH%>
+    <%= f.submit "#{ @training.persisted? ? 'Update' : 'Create' } Training" %>
+<% end %>
